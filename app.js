@@ -5,7 +5,7 @@ const http = require("http");
 const server = http.createServer(app);
 const io = socketio(server);
 const path = require("path");
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
